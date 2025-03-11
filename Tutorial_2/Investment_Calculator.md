@@ -1,8 +1,8 @@
-# Assignment: Annual Investment Calculator
+# Assignment: Monthly Investment Calculator
 
 ## Objective
 
-In this assignment, you will build a Python program that calculates the potential growth of an annual investment strategy. The user will be prompted for:
+In this assignment, you will build a Python program that calculates the potential growth of a monthly investment strategy. The user will be prompted for:
 
 - **Monthly Investment Amount** (in Rands)
 - **Expected Annual Return** (as a percentage)
