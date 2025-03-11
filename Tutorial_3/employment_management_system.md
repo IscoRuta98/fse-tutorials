@@ -50,12 +50,12 @@ Develop a Python application that manages employee data using Python's `sqlite3`
 
   ```
     1. Insert new employee record
-    2. Query employees by department"
-    3. List all employees sorted by hire date"
-    4. Update employee record"
-    5. Delete employee record"
-    6. Calculate average salary by department"
-    7. Exit"
+    2. Query employees by department
+    3. List all employees sorted by hire date
+    4. Update employee record
+    5. Delete employee record
+    6. Calculate average salary by department
+    7. Exit
   ```
  - Make sure your `employees` table is populated with records.
 
