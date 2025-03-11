@@ -1,9 +1,11 @@
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format='%(levelname)s: %(message)s')
+logging.basicConfig(level=logging.DEBUG, format="%(levelname)s: %(message)s")
 
 
-def calculate_monthly_repayment(price: float, years: float, annual_interest_rate: float, deposit: float = 0.0) -> float:
+def calculate_monthly_repayment(
+    price: float, years: float, annual_interest_rate: float, deposit: float = 0.0
+) -> float:
     """
     Calculate the monthly repayment for a car loan.
 
@@ -26,8 +28,10 @@ def calculate_monthly_repayment(price: float, years: float, annual_interest_rate
     :return: float - the calculated monthly repayment.
     :raises ValueError: if any input is negative or if deposit exceeds price.
     """
-    logging.info(f"Calculating monthly repayment with price={price}, years={years}, "
-                  f"annual_interest_rate={annual_interest_rate}, deposit={deposit}")
+    logging.info(
+        f"Calculating monthly repayment with price={price}, years={years}, "
+        f"annual_interest_rate={annual_interest_rate}, deposit={deposit}"
+    )
 
     if price < 0:
         raise ValueError("Price cannot be negative.")
@@ -44,13 +48,17 @@ def calculate_monthly_repayment(price: float, years: float, annual_interest_rate
     number_of_payments = years * 12
 
     if number_of_payments <= 0:
-        raise ValueError("The number of payments must be greater than 0. Check the value of years.")
+        raise ValueError(
+            "The number of payments must be greater than 0. Check the value of years."
+        )
 
     if annual_interest_rate == 0:
         monthly_repayment = loan_amount / number_of_payments
     else:
         monthly_interest_rate = (annual_interest_rate / 100) / 12
-        monthly_repayment = (loan_amount * monthly_interest_rate) / (1 - (1 + monthly_interest_rate) ** (-number_of_payments))
+        monthly_repayment = (loan_amount * monthly_interest_rate) / (
+            1 - (1 + monthly_interest_rate) ** (-number_of_payments)
+        )
 
     logging.info(f"Calculated monthly repayment: {monthly_repayment}")
     return monthly_repayment
@@ -77,8 +85,10 @@ def get_user_input() -> tuple[float, float, float, float]:
         logging.error("Invalid input. Please enter numeric values.")
         raise ValueError("Invalid input. Please ensure all inputs are numbers.") from e
 
-    logging.debug(f"User input received: price={price}, years={years}, "
-                  f"annual_interest_rate={annual_interest_rate}, deposit={deposit}")
+    logging.debug(
+        f"User input received: price={price}, years={years}, "
+        f"annual_interest_rate={annual_interest_rate}, deposit={deposit}"
+    )
     return price, years, annual_interest_rate, deposit
 
 
@@ -92,7 +102,9 @@ def main():
     try:
         price, years, annual_interest_rate, deposit = get_user_input()
 
-        repayment = calculate_monthly_repayment(price, years, annual_interest_rate, deposit)
+        repayment = calculate_monthly_repayment(
+            price, years, annual_interest_rate, deposit
+        )
         print(f"Your monthly repayment is: ${repayment:.2f}")
     except ValueError as e:
         logging.error(f"Error in calculation: {e}")

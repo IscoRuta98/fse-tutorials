@@ -1,6 +1,7 @@
 import pytest
 from investment_calculator import calculate_investment_growth, get_user_input
 
+
 def test_calculate_investment_growth_normal():
     """
     Test normal calculation with a non-zero annual return.
@@ -14,13 +15,18 @@ def test_calculate_investment_growth_normal():
 
     # Calculate monthly_rate and expected amount using the annuity formula:
     monthly_rate = (annual_return / 100) / 12
-    expected_amount = monthly_investment * ((1 + monthly_rate) ** num_months - 1) / monthly_rate
+    expected_amount = (
+        monthly_investment * ((1 + monthly_rate) ** num_months - 1) / monthly_rate
+    )
     expected_wealth_gain = expected_amount - expected_investment
 
-    inv_amt, exp_amt, wealth_gain = calculate_investment_growth(monthly_investment, annual_return, years)
+    inv_amt, exp_amt, wealth_gain = calculate_investment_growth(
+        monthly_investment, annual_return, years
+    )
     assert inv_amt == pytest.approx(expected_investment, rel=1e-2)
     assert exp_amt == pytest.approx(expected_amount, rel=1e-2)
     assert wealth_gain == pytest.approx(expected_wealth_gain, rel=1e-2)
+
 
 def test_calculate_investment_growth_zero_return():
     """
@@ -33,10 +39,13 @@ def test_calculate_investment_growth_zero_return():
     num_months = years * 12
     expected_investment = monthly_investment * num_months
 
-    inv_amt, exp_amt, wealth_gain = calculate_investment_growth(monthly_investment, annual_return, years)
+    inv_amt, exp_amt, wealth_gain = calculate_investment_growth(
+        monthly_investment, annual_return, years
+    )
     assert inv_amt == pytest.approx(expected_investment, rel=1e-2)
     assert exp_amt == pytest.approx(expected_investment, rel=1e-2)
     assert wealth_gain == pytest.approx(0, rel=1e-2)
+
 
 def test_calculate_investment_growth_invalid_input():
     """
@@ -49,6 +58,7 @@ def test_calculate_investment_growth_invalid_input():
     with pytest.raises(ValueError):
         calculate_investment_growth(1000, 10, -5)
 
+
 def test_get_user_input_valid(monkeypatch):
     """
     Test get_user_input with valid numeric inputs using monkeypatch.
@@ -59,6 +69,7 @@ def test_get_user_input_valid(monkeypatch):
     assert monthly_investment == pytest.approx(1500.0)
     assert annual_return == pytest.approx(8.0)
     assert years == pytest.approx(7.0)
+
 
 def test_get_user_input_invalid(monkeypatch):
     """
