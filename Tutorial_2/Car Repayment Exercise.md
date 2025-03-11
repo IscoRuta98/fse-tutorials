@@ -30,6 +30,9 @@ The aim of this assignment is to:
        loan_amount = price - deposit
        ```
        Then compute the monthly repayment using the formula for an amortizing loan:
+       ![Implementation of the Formulae](/Tutorial_2/monthly_repayment.png)
+
+       Or...
        ```
        monthly_interest_rate = (annual_interest_rate / 100) / 12
        number_of_payments = years * 12
