@@ -91,16 +91,11 @@ The aim of this assignment is to:
      - A deposit equal to the car price.
      - Non-numeric input for user inputs (use pytest’s `monkeypatch` fixture).
 
-## Part 4: Submission and Extra Credit
+## Part 4: Submission
 
-1. **Submission:**
-   - Submit your `car_loan.py` and `test_car_loan.py` files.
+   - Create a Github repository to keep track of your solutions. Within your repository, submit your `car_repayment.py` and `test_car_repayment.py` files.
    - Ensure your code is well-documented, follows the style guides, and passes all unit tests.
 
-2. **Extra Credit (Optional):**
-   - Extend the program by adding a function to compute the total interest paid over the life of the loan.
-   - Write additional tests to cover this new function.
-   - Implement integration tests to simulate a full car loan calculation scenario with various inputs.
 
 ## Hints and Resources
 
@@ -122,5 +117,6 @@ The aim of this assignment is to:
 
 - **Unit Testing with pytest:**
   - Review the [pytest documentation](https://docs.pytest.org/en/latest/) for guidance.
+  - Read the following article on testing using [pytest module](https://realpython.com/pytest-python-testing/)
   - Use assertions like `assert` and `pytest.approx` for comparing floating-point values.
   - Utilize the `monkeypatch` fixture to simulate user input.

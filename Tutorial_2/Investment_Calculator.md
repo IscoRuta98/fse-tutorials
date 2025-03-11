@@ -143,4 +143,3 @@ You are expected to:
 - **Mathematical Formulas:**
   - [Future Value of an Annuity](https://en.wikipedia.org/wiki/Annuity_(finance_theory)#Future_value_of_an_annuity)
 
-By completing this assignment, you will learn how to structure a small Python project, handle user inputs safely, calculate financial projections, log debug information, and thoroughly test your code using pytest.
