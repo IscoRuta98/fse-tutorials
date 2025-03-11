@@ -46,6 +46,18 @@ Develop a Python application that manages employee data using Python's `sqlite3`
 - **Command-Line Interface (CLI):**  
   - Build a Python CLI that allows managers to run queries and update employee information.
   - Add a feature that calculates the average salary per department.
+  - The CLI should allow the user to do the following...
+
+  ```
+    1. Insert new employee record
+    2. Query employees by department"
+    3. List all employees sorted by hire date"
+    4. Update employee record"
+    5. Delete employee record"
+    6. Calculate average salary by department"
+    7. Exit"
+  ```
+ - Make sure your `employees` table is populated with records.
 
 
 ## Hints and Resources
