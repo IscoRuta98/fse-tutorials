@@ -34,7 +34,7 @@ You are expected to:
        Calculate the final investment value based on monthly contributions, an annual return rate, and a given number of years.
 
      - **Implementation Detail:**  
-       - ![Implementation of the Formulae](Tutorial_2/image.png)
+       - ![Implementation of the Formulae](/Tutorial_2/formulae.png)
 
        - **Validate** that `monthly_investment`, `annual_return`, and `years` are non-negative. Raise a `ValueError` with a descriptive message if validation fails.
        - **Return** a tuple of `(investment_amount, expected_amount, wealth_gain)`.
