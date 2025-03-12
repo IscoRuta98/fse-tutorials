@@ -1,6 +1,6 @@
 # Git & GitHub, and Exercism
 
-The bojective of this tutorial is to expose you to Git basics, and the Exercism platform
+The objecrtive of this tutorial is to help you setup Git on your local computers, understand Git basics, and onboard you to the Exercism platform
 
 **Git**:
 
