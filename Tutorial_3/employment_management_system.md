@@ -38,6 +38,8 @@ Develop a Python application that manages employee data using Python's `sqlite3`
   - A function to **query** employee data.
   - A function to **update** employee data.
   - A function to **delete** employee records.
+  - A function to **import** employee records.
+  - A function to **export** employee records.
 - **Use parameterized queries** to prevent SQL injection.
 - **Include error handling and logging** to track operations and manage errors effectively.
 
@@ -55,7 +57,9 @@ Develop a Python application that manages employee data using Python's `sqlite3`
     4. Update employee record
     5. Delete employee record
     6. Calculate average salary by department
-    7. Exit
+    7. Import Data from a CSV file
+    8. Export Data from a CSV file
+    9. Exit
   ```
  - Make sure your `employees` table is populated with records.
 

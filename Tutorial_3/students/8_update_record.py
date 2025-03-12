@@ -1,19 +1,19 @@
 import sqlite3
 
 # Use 'with' to connect to the SQLite database
-with sqlite3.connect('my_database.db') as connection:
+with sqlite3.connect("my_database.db") as connection:
     cursor = connection.cursor()
 
     # SQL command to update a student's age
-    update_query = '''
+    update_query = """
     UPDATE Students 
     SET age = ? 
     WHERE name = ?;
-    '''
+    """
 
     # Data for the update
     new_age = 25
-    student_name = 'Jane Doe'
+    student_name = "Jane Doe"
 
     # Execute the SQL command with the data
     cursor.execute(update_query, (new_age, student_name))

@@ -18,9 +18,7 @@ with sqlite3.connect("my_database.db") as connection:
     VALUES (?, ?, ?);
     """
     students_data = [
-        (fake.name(), 
-         fake.random_int(min=18, max=25), 
-         fake.email()) for _ in range(5)
+        (fake.name(), fake.random_int(min=18, max=25), fake.email()) for _ in range(5)
     ]
 
     # Execute the query for multiple records
