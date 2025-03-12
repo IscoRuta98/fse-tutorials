@@ -85,7 +85,7 @@ def get_user_input() -> tuple[float, float, float, float]:
         logging.error("Invalid input. Please enter numeric values.")
         raise ValueError("Invalid input. Please ensure all inputs are numbers.") from e
 
-    logging.debug(
+    logging.info(
         f"User input received: price={price}, years={years}, "
         f"annual_interest_rate={annual_interest_rate}, deposit={deposit}"
     )
@@ -105,7 +105,7 @@ def main():
         repayment = calculate_monthly_repayment(
             price, years, annual_interest_rate, deposit
         )
-        print(f"Your monthly repayment is: ${repayment:.2f}")
+        print(f"Your monthly repayment is: R{repayment:.2f}")
     except ValueError as e:
         logging.error(f"Error in calculation: {e}")
         print(f"Error: {e}")
