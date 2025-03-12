@@ -1,4 +1,6 @@
-# Git & GitHub
+# Git & GitHub, and Exercism
+
+The bojective of this tutorial is to expose you to Git basics, and the Exercism platform
 
 **Git**:
 
@@ -55,3 +57,12 @@
     git push -u origin main
     ```
     `origin` is the default name for the remote repository on GitHub and `main` is the default branch name. After this command, your code will be available in your GitHub repository.
+
+
+## Exercism
+
+[Exercism](https://exercism.org/tracks/python/) is a free, open-source platform that offers interactive coding practice in a wide variety of programming languages, including Python. It provides structured exercises, each accompanied by test suites and community-driven feedback. This means you can usw the platform to improve your coding skills by working on real-world challenges, while also benefiting from guidance and insights shared by other developers.
+
+On the Python track, you’ll find exercises designed for beginners learning the basics, as well as more advanced tasks that help you hone your problem-solving skills. Whether you’re just starting out or looking to refine your expertise, Exercism’s collaborative environment ensures you get the support and practice you need. 
+
+If you decide to explore beyond Python, the platform also hosts tracks for languages such as Java, C#, Ruby, and many more.
