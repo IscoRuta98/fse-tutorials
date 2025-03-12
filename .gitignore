@@ -187,5 +187,6 @@ pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv
 
-# do not save sql files
+# do not save .sql & .db files.
 *.sql
+*.db
