@@ -3,7 +3,7 @@
 The aim of this tutorial is to expose you to different techniques of analysing & visualising data using: Numpy, Python, and Seaborn & Matplotlib.
 
 **References**:
-- (Data Analysis with Pandas)[https://www.udemy.com/course/data-analysis-with-pandas/?couponCode=ST11MT170325G1]
+- [Data Analysis with Pandas](https://www.udemy.com/course/data-analysis-with-pandas/?couponCode=ST11MT170325G1)
 
 # Assignment 1: Synthetic Asset Price Analysis & Database Operations
 
@@ -11,7 +11,7 @@ The aim of this tutorial is to expose you to different techniques of analysing &
 
 Develop a Python application that generates synthetic asset price data using NumPy, stores the data in a SQLite database, and performs data analysis and visualization using Pandas and Matplotlib/Seaborn. This assignment reinforces numerical programming, CRUD operations, and data visualization techniques.
 
-## Tasks
+## Assignment 1
 
 ### 1. Generate Synthetic Data Using NumPy
 - **Generate Data for 1000 Days:**  
@@ -44,12 +44,7 @@ Develop a Python application that generates synthetic asset price data using Num
 ### 4. Data Visualization
 - **Visualize the Data:**  
   - **Line Plot:** Show the trend of opening and closing prices over time.
-  - **Histogram:** Plot the distribution of the average price.
-  - **Bar Chart:** Compare the mean price for "Buy" versus "Sell" activities.
-- **Optional:** Use Seaborn to enhance the visuals.
-
-## Advanced Features (Optional)
-- Implement a simple command-line interface (CLI) to perform the CRUD operations.
+  - **Histogram:** Plot the distribution of the average closing & opening prices.
 
 ## Hints and Resources
 - **NumPy Documentation:** [NumPy User Guide](https://numpy.org/doc/stable/user/)
@@ -110,5 +105,3 @@ Create a Jupyter notebook (.ipynb) file that performs data manipulation and visu
 - Refer to the "ECO5040S - Financial Software Engineering 5 - Numerical Programming.pdf" for further insights on numerical programming and data operations.
 
 ---
-
-These assignments cover a wide range of numerical programming concepts using Python, including synthetic data generation, database operations, data manipulation with Pandas, and data visualization with Matplotlib/Seaborn. They are designed to help you integrate and apply your knowledge to practical, real-world data scenarios.
