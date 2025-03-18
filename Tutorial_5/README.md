@@ -78,16 +78,10 @@ Create a new Python file, for example `example.py`, and add the following code:
 
 ```python
 import os
-from dotenv import load_dotenv
-from pathlib import Path
 from openai import OpenAI
 
 
-dotenv_path = Path('path/to/.env')
-load_dotenv(dotenv_path=dotenv_path)
-
-
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 completion = client.chat.completions.create(
     model="gpt-4o",
