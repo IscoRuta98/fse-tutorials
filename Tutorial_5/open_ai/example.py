@@ -1,14 +1,11 @@
+# This script is an example of how to use the OpenAI API to generate text using the GPT-4 model.
+# The script sends a request to the OpenAI API to generate a one-sentence bedtime story about a unicorn.
+# The response is then printed to the console.
 import os
-from dotenv import load_dotenv
-from pathlib import Path
 from openai import OpenAI
 
 
-dotenv_path = Path('path/to/.env')
-load_dotenv(dotenv_path=dotenv_path)
-
-
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 completion = client.chat.completions.create(
     model="gpt-4o",
