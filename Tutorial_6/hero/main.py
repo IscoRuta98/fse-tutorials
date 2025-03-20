@@ -1,7 +1,8 @@
 from typing import Annotated
 
-from fastapi import Depends, FastAPI, HTTPException, Query
-from sqlmodel import Session, SQLModel, create_engine, select
+from fastapi import FastAPI, HTTPException, Query
+from starlette import status
+from sqlmodel import select
 from models import Hero, HeroCreate, HeroPublic, HeroUpdate
 
 from db import create_db_and_tables, SessionDep
@@ -15,7 +16,7 @@ def on_startup():
     create_db_and_tables()
 
 
-@app.post("/heroes/", response_model=HeroPublic)
+@app.post("/heroes/", response_model=HeroPublic, status_code=status.HTTP_201_CREATED)
 def create_hero(hero: HeroCreate, session: SessionDep):
     db_hero = Hero.model_validate(hero)
     session.add(db_hero)
@@ -24,7 +25,7 @@ def create_hero(hero: HeroCreate, session: SessionDep):
     return db_hero
 
 
-@app.get("/heroes/", response_model=list[HeroPublic])
+@app.get("/heroes/", response_model=list[HeroPublic], status_code=status.HTTP_200_OK)
 def read_heroes(
     session: SessionDep,
     offset: int = 0,
@@ -34,7 +35,7 @@ def read_heroes(
     return heroes
 
 
-@app.get("/heroes/{hero_id}", response_model=HeroPublic)
+@app.get("/heroes/{hero_id}", response_model=HeroPublic, status_code=status.HTTP_200_OK)
 def read_hero(hero_id: int, session: SessionDep):
     hero = session.get(Hero, hero_id)
     if not hero:
@@ -55,7 +56,7 @@ def update_hero(hero_id: int, hero: HeroUpdate, session: SessionDep):
     return hero_db
 
 
-@app.delete("/heroes/{hero_id}")
+@app.delete("/heroes/{hero_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_hero(hero_id: int, session: SessionDep):
     hero = session.get(Hero, hero_id)
     if not hero:
