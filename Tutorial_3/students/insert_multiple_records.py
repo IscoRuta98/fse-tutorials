@@ -1,5 +1,6 @@
-from faker import Faker
 import sqlite3
+
+from faker import Faker
 
 # Initialize Faker
 

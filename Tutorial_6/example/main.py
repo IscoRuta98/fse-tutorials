@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 """
 FastAPI application with basic endpoints.
 
@@ -20,6 +21,7 @@ Usage:
 """
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():

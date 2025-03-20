@@ -1,5 +1,6 @@
-from agents import Agent, Runner
 import asyncio
+
+from agents import Agent, Runner
 
 # Define a Keynesian economist agent.
 # Keynesians prioritize government spending to stimulate GDP,
@@ -26,20 +27,22 @@ monetarist_agent = Agent(
     ),
 )
 
+
 async def main():
     # Prompt the user for a question
     user_question = input("Enter your economics question: ")
-    
+
     # Query both agents with the user-provided question.
     keynesian_result = await Runner.run(keynesian_agent, input=user_question)
     monetarist_result = await Runner.run(monetarist_agent, input=user_question)
-    
+
     # Display the responses from each agent.
     print("\n=== Keynesian Agent Output ===")
     print(keynesian_result.final_output)
-    
+
     print("\n=== Monetarist Agent Output ===")
     print(monetarist_result.final_output)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

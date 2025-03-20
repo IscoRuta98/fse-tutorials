@@ -1,5 +1,7 @@
 from typing import Optional
+
 from pydantic import BaseModel, Field
+
 
 class Book:
     id: int
@@ -18,8 +20,9 @@ class Book:
         self.rating = rating
         self.published_date = published_date
 
+
 class BookRequest(BaseModel):
-    id: Optional[int] = Field(title='id is not needed')
+    id: Optional[int] = Field(title="id is not needed")
     title: str = Field(min_length=3)
     author: str = Field(min_length=1)
     description: str = Field(min_length=1, max_length=300)
@@ -28,12 +31,11 @@ class BookRequest(BaseModel):
 
     class Config:
         json_schema_extra = {
-            'example': {
-                'title': 'A new book',
-                'author': 'Author Name',
-                'description': 'A new description of a book',
-                'rating': 5,
-                'published_date': 2029
+            "example": {
+                "title": "A new book",
+                "author": "Author Name",
+                "description": "A new description of a book",
+                "rating": 5,
+                "published_date": 2029,
             }
         }
-

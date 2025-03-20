@@ -9,9 +9,11 @@ class TodoDB(SQLModel, table=True):
     The task_title column will store the title of the task
     The completed column will store the completion status of the task
     """
+
     id: int | None = Field(default=None, primary_key=True)
     task_title: str = Field(index=True)
     completed: bool = Field(default=False, index=True)
+
 
 class TodoResponse(SQLModel):
     """
@@ -20,9 +22,11 @@ class TodoResponse(SQLModel):
     The task_title field will store the title of the task
     The completed field will store the completion status of the task
     """
+
     id: int
     task_title: str
     completed: bool
+
 
 class CreateTodo(SQLModel):
     """
@@ -30,8 +34,10 @@ class CreateTodo(SQLModel):
     The task_title field is required and will store the title of the task
     The completed field is optional and will store the completion status of the task
     """
+
     task_title: str = Field(index=True)
     completed: bool = Field(default=False, index=True)
+
 
 class UpdateTodo(SQLModel):
     """
@@ -39,12 +45,15 @@ class UpdateTodo(SQLModel):
     The task_title field is optional and will store the new title of the task
     The completed field is optional and will store the new completion status of the task
     """
+
     task_title: str | None = Field(index=True)
     completed: bool | None = Field(index=True)
+
 
 class DeleteTodo(SQLModel):
     """
     This class is used to define the structure of the request body for deleting a task
     The id field is required and will store the id of the task to be deleted
     """
+
     id: int

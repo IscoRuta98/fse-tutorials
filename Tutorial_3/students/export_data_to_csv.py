@@ -1,5 +1,5 @@
-import sqlite3
 import csv
+import sqlite3
 
 
 def export_to_csv(file_name: str):

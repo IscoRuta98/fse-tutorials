@@ -1,12 +1,10 @@
 from typing import Annotated
 
+from db import SessionDep, create_db_and_tables
 from fastapi import FastAPI, HTTPException, Query
-from starlette import status
-from sqlmodel import select
 from models import Hero, HeroCreate, HeroPublic, HeroUpdate
-
-from db import create_db_and_tables, SessionDep
-
+from sqlmodel import select
+from starlette import status
 
 app = FastAPI()
 

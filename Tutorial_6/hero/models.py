@@ -1,5 +1,6 @@
 from sqlmodel import Field, SQLModel
 
+
 class HeroBase(SQLModel):
     name: str = Field(index=True)
     age: int | None = Field(default=None, index=True)
