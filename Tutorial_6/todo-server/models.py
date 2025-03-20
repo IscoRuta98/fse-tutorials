@@ -1,7 +1,7 @@
 from sqlmodel import Field, SQLModel
 
 
-class TodoDB(SQLModel, table=True):
+class Todo(SQLModel, table=True):
     """
     This class is used to define the structure of the database table
     The table will have three columns: id, task_title, and completed

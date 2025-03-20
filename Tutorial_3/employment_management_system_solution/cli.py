@@ -1,9 +1,15 @@
 import datetime
 
-from database import (calculate_average_salary_by_department,
-                      create_connection, create_table, delete_employee,
-                      insert_employee, query_all_employees_sorted_by_hire_date,
-                      query_employees_by_department, update_employee)
+from database import (
+    calculate_average_salary_by_department,
+    create_connection,
+    create_table,
+    delete_employee,
+    insert_employee,
+    query_all_employees_sorted_by_hire_date,
+    query_employees_by_department,
+    update_employee,
+)
 
 
 def cli_menu():
