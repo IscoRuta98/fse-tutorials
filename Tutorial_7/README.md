@@ -65,7 +65,7 @@ In this assignment, you will:
 
 1. **Create a FastAPI Application**:
     - Create a new FastAPI project with a simple endpoint (e.g., `GET /` that returns "Hello, World!").
-    - You are more than welcome to use the FastAPI application you uilt in the previous tutorial (In fact it is encouraged :D)
+    - You are more than welcome to use the FastAPI application you built in the previous tutorial (In fact it is encouraged :D)
     - Push your code to a new GitHub repository.
 
 
