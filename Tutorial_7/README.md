@@ -51,9 +51,7 @@ https://github.com/IscoRuta98/todo-server
 
 The above repo is an example of deploying a FastAPI application on Render and using GitHub Actions for CI. 
 
-# Activity
-
-## Assignment: Deploying a FastAPI Application with CI/CD
+# Activity: Deploying a FastAPI Application with CI/CD
 
 ### Objective:
 In this assignment, you will:
