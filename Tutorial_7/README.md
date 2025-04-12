@@ -77,39 +77,42 @@ In this assignment, you will:
     - Create a workflow file (e.g., `ci.yml`) to:
       - Check code formatting using `black`.
       - Lint the code using `flake8`.
-    - Example workflow snippet:
-      ```yaml
-      name: CI
-
-      on:
-         push:
+    - Example workflow:
+    ```yaml
+    name: CI
+    
+    on:
+        pull-request:
             branches:
-              - main
-         pull_request:
-
-      jobs:
-         lint-and-format:
+            - main
+    
+    jobs:
+        Lint-and-format-checking:
             runs-on: ubuntu-latest
-            steps:
-              - name: Checkout code
-                 uses: actions/checkout@v3
 
-              - name: Set up Python
-                 uses: actions/setup-python@v4
-                 with:
-                    python-version: '3.9'
+        steps:
+            - uses: actions/checkout@v4
 
-              - name: Install dependencies
-                 run: |
+            - name: Set up Python
+            - uses: actions/setup-pyhton@v5
+            with:
+                python-version: '3.11'
+
+            - name: install dependencies
+                run: |
                     python -m pip install --upgrade pip
                     pip install black flake8
 
-              - name: Run Black
-                 run: black --check .
+            - name: Check formatting with Black
+                run: |
+                    black --check .
 
-              - name: Run Flake8
-                 run: flake8 .
-      ```
+            - name: Check linting with Flke8
+                run: |
+                    flake8 .
+    ```
+
+    - If you are interested in integrating tests to your FastAPI, checkout the [Testing session of the FastAPI docs](https://fastapi.tiangolo.com/tutorial/testing/). 
 
 4. **Add Branch Protection Rules**:
     - Go to your repository settings on GitHub.
@@ -132,5 +135,3 @@ In this assignment, you will:
   - The branch protection rule configuration.
   - A failed workflow due to formatting or linting issues.
   - A successful workflow after fixing the issues.
-
-Good luck! :D
