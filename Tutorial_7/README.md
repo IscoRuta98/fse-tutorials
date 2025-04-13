@@ -1,6 +1,7 @@
 # Continous Integration & Continous Deployment (CI/CD) in Python
 
-## Resources:
+## Resources
+
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Deploying FastAPI Application on Render](https://render.com/docs/deploy-fastapi)
 - [Improving Code Quality with Flake8 and Black: A Guide for Python Developers](https://medium.com/@huzaifazahoor654/improving-code-quality-with-flake8-and-black-a-guide-for-python-developers-c374168d5884#:~:text=Flake8%20is%20a%20linter%20tool,quality%20of%20your%20Python%20code.)
@@ -11,25 +12,24 @@
 CI/CD stands for **Continuous Integration** and **Continuous Deployment** (or **Continuous Delivery**). It is a set of practices and tools that help developers automate parts of the software development process, such as building, testing, and deploying code. This makes it easier to release updates quickly and reliably.
 
 ### Continuous Integration (CI)
+
 This is the practice of automatically building and testing code changes whenever developers push updates to a shared repository. It ensures that new changes work well with the existing codebase.
 
 ### Continuous Delivery (CD)
+
 This involves automatically preparing code changes for release to production. The deployment is ready but requires manual approval before going live.
 
 ### Continuous Deployment (CD)
+
 This takes automation a step further by automatically deploying code changes to production without requiring manual approval.
 
 Together, CI and CD form a **CI/CD pipeline**, which is a series of automated steps that streamline the development process and reduce manual effort. This pipeline is a key part of modern DevOps practices.
 
 To reference an image located in the `images/` directory within the same directory as this markdown file, you can use the following syntax:
 
-
 [Visual example of CI/CD](/Tutorial_7/images/ci-cd-example.png)
 
-
-
 ### Why CI/CD is important in software development?
-
 
 The short answer: Speed. The State of DevOps report found organizations that have “mastered” CI/CD deploy 208 times more often and have a lead time that is 106 times faster than the rest. While faster development is the most well-known benefit of CI/CD, a continuous integration and continuous delivery pipeline enables much more.
 
@@ -45,27 +45,28 @@ The short answer: Speed. The State of DevOps report found organizations that hav
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
-## Example of CI/CD in a Pyhton application:
+## Example of CI/CD in a Pyhton application
 
-https://github.com/IscoRuta98/todo-server
+<https://github.com/IscoRuta98/todo-server>
 
-The above repo is an example of deploying a FastAPI application on Render and using GitHub Actions for CI. 
+The above repo is an example of deploying a FastAPI application on Render and using GitHub Actions for CI.
 
-# Activity: Deploying a FastAPI Application with CI/CD
+## Activity - Deploying a FastAPI Application with CI/CD practices
 
-### Objective:
+### Objective
+
 In this assignment, you will:
+
 1. Deploy a simple FastAPI application on Render.
 2. Set up GitHub workflows for formatting (using `black`) and linting (using `flake8`).
 3. Configure branch protection rules to ensure code quality before merging pull requests.
 
-### Steps:
+### Steps
 
 1. **Create a FastAPI Application**:
     - Create a new FastAPI project with a simple endpoint (e.g., `GET /` that returns "Hello, World!").
     - You are more than welcome to use the FastAPI application you built in the previous tutorial (In fact it is encouraged :D)
     - Push your code to a new GitHub repository.
-
 
 2. **Deploy on Render**:
     - Create a Render account if you don’t have one.
@@ -78,6 +79,7 @@ In this assignment, you will:
       - Check code formatting using `black`.
       - Lint the code using `flake8`.
     - Example workflow:
+
     ```yaml
     name: CI
     
@@ -112,7 +114,7 @@ In this assignment, you will:
                     flake8 .
     ```
 
-    - If you are interested in integrating tests to your FastAPI, checkout the [Testing session of the FastAPI docs](https://fastapi.tiangolo.com/tutorial/testing/). 
+    - If you are interested in integrating tests to your FastAPI, checkout the [Testing session of the FastAPI docs](https://fastapi.tiangolo.com/tutorial/testing/).
 
 4. **Add Branch Protection Rules**:
     - Go to your repository settings on GitHub.
@@ -128,7 +130,8 @@ In this assignment, you will:
     - Verify that the workflow runs and blocks the merge if checks fail.
     - Fix the issues, push the changes, and confirm the pull request can be merged once all checks pass.
 
-### Deliverables:
+### Deliverables
+
 - A link to your GitHub repository.
 - The Render URL of your deployed FastAPI application.
 - Screenshots showing:
