@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en"> <!--This is the start of the HTML document-->
+<head> <!--This section contains meta-information about the document-->
+    <meta charset="UTF-8"> <!--Specifies the character encoding for the HTML document-->
+    <meta name="description" content="A personal page about Jane Doe."> <!--Provides a brief description of the page-->
+    <meta name="keywords" content="Jane Doe, personal page, about me"> <!--Lists keywords relevant to the page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ensures proper rendering and touch zooming on mobile devices-->
+    <title>About Me</title> <!--Sets the title of the document, which appears in the browser tab-->
+    <link rel="stylesheet" href="styles.css"> <!--Links to an external CSS file for styling-->
+
+</head>
+<body> <!--This is the main content of the HTML document-->
+    <header> <!--This section contains introductory content or navigational links-->
+        <h1>About Me</h1>
+    </header>
+    <main> <!--This section contains the main content of the document-->
+        <section> <!--This section is a thematic grouping of content-->
+            <h2>Introduction</h2> <!--This is a subheading-->
+            <p>Hello! My name is Jane Doe. Welcome to my personal page where you can learn more about me.</p> <!--This is a paragraph providing an introduction-->
+        </section>
+        <section>
+            <h2>Hobbies</h2>
+            <ul> <!--This is an unordered list of hobbies-->
+                <li>Reading</li> <!--This is a list item-->
+                <li>Coding</li>
+                <li>Traveling</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>You can reach me at: <a href="mailto:your-email@example.com">jane-doe@example.com</a></p>
+        </section>
+        <section>
+            <h2>My Favorite Books</h2>
+            <ol> <!--This is an ordered list of favorite books-->
+                <li>The Great Gatsby</li>
+                <li>To Kill a Mockingbird</li>
+                <li>1984</li>
+            </ol>
+        </section>
+        <section>
+            <button id="toggle-btn">Toggle Contact Info</button> <!--This is a button that toggles the display of contact information-->
+            <div> <!--A <div> is a block-level container element in HTML used to group and structure content for styling or layout purposes.-->
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to me via email or social media!</p>
+            </div>
+        </section>
+    </main>
+    <footer> <!--This section contains footer content-->
+        <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+    </footer>
+
+    <script> <!--This section contains JavaScript code for interactivity-->
+        // This script runs when the page is loaded
+        // It displays an alert message to welcome the user
+        // and toggles the background color of the button when clicked
+        // The window.onload event is triggered when the page is fully loaded
+        // The alert function displays a message box with the specified text
+        // The getElementById method retrieves the button element by its ID
+        window.onload = function() {
+          alert("Welcome to Jane Doe's personal page!");
+        };
+      
+        document.getElementById("toggle-btn").addEventListener("click", function() {
+          this.style.backgroundColor = this.style.backgroundColor === "blue" ? "green" : "blue";
+        });
+      </script>
+</body>
+</html>
